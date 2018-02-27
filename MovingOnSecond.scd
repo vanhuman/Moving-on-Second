@@ -321,8 +321,10 @@ s.waitForBoot {
 	win.front;
 
 	~vol = Volume.new;
+	{
 	~vol.volume = -10;
 	~vol.gui;
+	}.defer(0.1);
 
 	// hide IDE
 	// "osascript -e 'tell application \"System Events\" to set visible of process \"SuperCollider\" to false'".unixCmd;
